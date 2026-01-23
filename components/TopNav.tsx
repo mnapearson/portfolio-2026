@@ -27,7 +27,10 @@ export default function TopNav() {
           const active = isActive(pathname, link.href);
           return (
             <li key={link.href}>
-              <Link href={link.href} aria-current={active ? "page" : undefined}>
+              <Link
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+              >
                 {link.label}
               </Link>
             </li>
