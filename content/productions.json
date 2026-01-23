@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "goldmund-festival",
+    "title": "Goldmund Festival",
+    "years": "2024–2025",
+    "role": "Program Coordination",
+    "scale": "~130 participants",
+    "duration": "5 days",
+    "location": "Historic castle venues in Germany & Poland",
+    "summary": "A chamber music festival setting with a curated program and guest experience. I supported program coordination and the moving parts around schedules, communication, and delivery across the team."
+  },
+  {
+    "slug": "detect-classic-festival",
+    "title": "Detect Classic Festival",
+    "years": "2023–2025",
+    "role": "Kidz Space Director",
+    "scale": "~1,200 participants",
+    "duration": "3 days",
+    "location": "Schloss Brollin",
+    "summary": "A festival blending classical, electronic, and experimental music. I led the Kidz Space area, coordinating planning, setup, and on-site delivery with the wider festival team.",
+    "website": "https://detectclassic.com/festival"
+  },
+  {
+    "slug": "chaos-computer-congress-38c3",
+    "title": "Chaos Computer Congress (38C3)",
+    "years": "2024",
+    "role": "Event Manager",
+    "scale": "~12,000 participants",
+    "duration": "4 days",
+    "location": "Hamburg Congress Center",
+    "summary": "A large-scale annual conference by the Chaos Computer Club. I worked on event management and coordination, helping keep planning, communication, and delivery aligned across teams.",
+    "website": "https://events.ccc.de/en/congress/"
+  },
+  {
+    "slug": "octopus-garden",
+    "title": "Octopus Garden",
+    "years": "2023",
+    "role": "Event Manager",
+    "scale": "~500 participants",
+    "duration": "2 days",
+    "location": "Leipzig",
+    "summary": "A one-off cultural event with live programming and production coordination. I supported event management and on-the-ground delivery across partners and schedules."
+  }
+]
