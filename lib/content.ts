@@ -5,11 +5,12 @@ export type Production = {
   title: string;
   years: string;
   role: string;
-  scale: string;
-  duration: string;
-  location: string;
+  scale?: string;
+  duration?: string;
+  location?: string;
   summary: string;
   website?: string;
+  image?: string;
 };
 
 const contentDir = path.join(process.cwd(), "content");
@@ -26,4 +27,14 @@ export function getProductions(): Production[] {
 
 export function getProduction(slug: string): Production | undefined {
   return getProductions().find((item) => item.slug === slug);
+}
+
+export function hasPublicFile(assetPath?: string): boolean {
+  if (!assetPath) {
+    return false;
+  }
+
+  const normalized = assetPath.startsWith("/") ? assetPath.slice(1) : assetPath;
+  const fullPath = path.join(process.cwd(), "public", normalized);
+  return fs.existsSync(fullPath);
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProduction, getProductions } from "@/lib/content";
+import { getProduction, getProductions, hasPublicFile } from "@/lib/content";
 
 export function generateStaticParams() {
   return getProductions().map((item) => ({ slug: item.slug }));
@@ -33,19 +34,51 @@ export default function ProductionDetailPage({
     notFound();
   }
 
+  const imageSrc =
+    production.image && hasPublicFile(production.image)
+      ? production.image
+      : null;
+  const details = [
+    { label: "Role", value: production.role },
+    { label: "Dates", value: production.years },
+    { label: "Scale", value: production.scale },
+    { label: "Duration", value: production.duration },
+    { label: "Location", value: production.location }
+  ].filter(
+    (item): item is { label: string; value: string } => Boolean(item.value)
+  );
+
   return (
     <div>
+      {imageSrc ? (
+        <a
+          className="entry-image-link"
+          href={imageSrc}
+          target="_blank"
+          rel="noreferrer">
+          <Image
+            className="entry-image"
+            src={imageSrc}
+            alt={`${production.title} cover`}
+            width={1600}
+            height={1000}
+            sizes="(min-width: 900px) 70vw, 100vw"
+          />
+        </a>
+      ) : null}
       <h1 className="page-title">{production.title}</h1>
       <h2 className="section-title">Overview</h2>
       <p>{production.summary}</p>
 
       <h2 className="section-title">Details</h2>
       <ul className="list">
-        <li className="list-item">Role: {production.role}</li>
-        <li className="list-item">Dates: {production.years}</li>
-        <li className="list-item">Scale: {production.scale}</li>
-        <li className="list-item">Duration: {production.duration}</li>
-        <li className="list-item">Location: {production.location}</li>
+        {details.map((item) => (
+          <li
+            key={item.label}
+            className="list-item">
+            {item.label}: {item.value}
+          </li>
+        ))}
       </ul>
 
       <p className="meta">

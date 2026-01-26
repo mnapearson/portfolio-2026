@@ -167,6 +167,20 @@ a:active {
   margin-top: 16px;
 }
 
+.entry-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 50vh;
+  display: block;
+  margin: 6px 0 10px;
+}
+
+.entry-image-link {
+  display: block;
+  cursor: zoom-in;
+}
+
 .entry-head {
   display: flex;
   gap: 10px;
