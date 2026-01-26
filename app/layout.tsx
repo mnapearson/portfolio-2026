@@ -49,9 +49,7 @@ export default function RootLayout({
             <main id="content" className="site-main">
               {children}
               <footer className="site-footer">
-                <span>
-                  Copyright {year} {SITE_NAME}
-                </span>
+                <span>Copyright {year} MNAP</span>
                 <span>Last updated {LAST_UPDATED}</span>
               </footer>
             </main>

@@ -62,7 +62,9 @@ export default function ProductionDetailPage({
             alt={`${production.title} cover`}
             width={1600}
             height={1000}
-            sizes="(min-width: 900px) 70vw, 100vw"
+            sizes="(min-width: 1400px) 980px, (min-width: 900px) 70vw, 100vw"
+            quality={70}
+            loading="lazy"
           />
         </a>
       ) : null}

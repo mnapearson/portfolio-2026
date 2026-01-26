@@ -13,19 +13,6 @@
   },
 
   {
-    "slug": "chaos-computer-congress-38c3",
-    "title": "Chaos Computer Congress (38C3)",
-    "years": "2024",
-    "role": "Event Manager",
-    "scale": "~12,000 participants",
-    "duration": "4 days",
-    "location": "Hamburg Congress Center",
-    "summary": "A large-scale annual conference by the Chaos Computer Club. I worked on event management and coordination, helping keep planning, communication, and delivery aligned across teams.",
-    "website": "https://events.ccc.de/en/congress/",
-    "image": "/productions/ccc/cover.png"
-  },
-
-  {
     "slug": "goldmund-festival",
     "title": "Goldmund Festival",
     "years": "2024–present",
@@ -38,25 +25,38 @@
   },
 
   {
+    "slug": "family-heirlooms",
+    "title": "Family Heirlooms (Modos Dever, Leipzig)",
+    "years": "Jun 2025",
+    "role": "Co-organiser and participant",
+    "scale": "8 families",
+    "summary": "A family-focused exhibition at Modos Dever in Leipzig. I contributed a piece with my daughter and supported the organisation of the exhibition.",
+    "website": "https://www.modos-dever.com/programme/family-heirlooms",
+    "image": "/productions/family-heirlooms/cover.png"
+  },
+
+  {
+    "slug": "chaos-computer-congress-38c3",
+    "title": "Chaos Computer Congress (38C3)",
+    "years": "Dec 2024",
+    "role": "Event Manager",
+    "scale": "~12,000 participants",
+    "duration": "4 days",
+    "location": "Hamburg Congress Center",
+    "summary": "A large-scale annual conference by the Chaos Computer Club. I worked on event management and coordination, helping keep planning, communication, and delivery aligned across teams.",
+    "website": "https://events.ccc.de/en/congress/",
+    "image": "/productions/ccc/cover.png"
+  },
+
+  {
     "slug": "octopus-garden",
     "title": "Octopus Garden",
-    "years": "2023",
+    "years": "Jul 2023",
     "role": "Event Manager",
     "scale": "~500 participants",
     "duration": "2 days",
     "location": "Leipzig",
     "summary": "A one-off cultural event with live programming and production coordination. I supported event management and on-the-ground delivery across partners and schedules.",
     "image": "/productions/octopus-garden/cover.png"
-  },
-
-  {
-    "slug": "family-heirlooms",
-    "title": "Family Heirlooms (Modos Dever, Leipzig)",
-    "years": "6.6. – 13.7.2025",
-    "role": "Co-organiser and participant",
-    "scale": "8 families",
-    "summary": "A family-focused exhibition at Modos Dever in Leipzig. I contributed a piece with my daughter and supported the organisation of the exhibition.",
-    "website": "https://www.modos-dever.com/programme/family-heirlooms",
-    "image": "/productions/family-heirlooms/cover.png"
   }
 ]

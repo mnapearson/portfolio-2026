@@ -208,11 +208,14 @@ a:active {
 }
 
 .site-footer {
-  margin-top: auto;
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+  flex-wrap: wrap;
   color: var(--muted);
+  font-size: 13px;
 }
 
 @media (min-width: 900px) {
@@ -245,5 +248,9 @@ a:active {
 
   .top-nav-list li:last-child {
     margin-bottom: 0;
+  }
+
+  .site-footer {
+    flex-direction: column;
   }
 }
