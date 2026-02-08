@@ -34,7 +34,9 @@ export default function TopNav({ labels }: Props) {
                 href={link.href}
                 aria-current={active ? "page" : undefined}
               >
-                {link.label}
+                <span className={`nav-link ${active ? "active" : ""}`}>
+                  {active ? `[${link.label}]` : link.label}
+                </span>
               </Link>
             </li>
           );

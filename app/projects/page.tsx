@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { projectsCopy } from "@/lib/i18n";
-import { getLangFromCookies } from "@/lib/i18n-server";
+import { getLangContext } from "@/lib/i18n-server";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Projects — Micky Arratoon",
@@ -8,11 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const lang = getLangFromCookies();
+  const { lang, nav } = getLangContext();
   const t = projectsCopy[lang];
 
   return (
     <div>
+      <PageHeader title={nav.projects} navLabels={nav} />
       <p>{t.intro}</p>
       <h2 className="section-title">{t.whatTitle}</h2>
       <ul className="list">

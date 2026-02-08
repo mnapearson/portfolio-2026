@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { productsCopy } from "@/lib/i18n";
-import { getLangFromCookies } from "@/lib/i18n-server";
+import { getLangContext } from "@/lib/i18n-server";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Products — Micky Arratoon",
@@ -8,11 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
-  const lang = getLangFromCookies();
+  const { lang, nav } = getLangContext();
   const t = productsCopy[lang];
 
   return (
     <div>
+      <PageHeader title={nav.products} navLabels={nav} />
       <p>{t.intro}</p>
 
       {t.entries.map((entry) => (
@@ -24,16 +26,14 @@ export default function ProductsPage() {
           <div className="entry-role">{entry.role}</div>
           <p>{entry.body}</p>
           <p className="entry-link">
-            {entry.websiteLabel}:{" "}
             <a href={entry.websiteUrl} rel="noreferrer" target="_blank">
-              {entry.websiteUrl}
+              {entry.websiteLabel.toUpperCase()}
             </a>
           </p>
           {entry.socialUrl ? (
             <p className="entry-link">
-              {entry.socialLabel}:{" "}
               <a href={entry.socialUrl} rel="noreferrer" target="_blank">
-                {entry.socialUrl}
+                {entry.socialLabel.toUpperCase()}
               </a>
             </p>
           ) : null}

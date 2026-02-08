@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
-import TopNav from "@/components/TopNav";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import {
   LAST_UPDATED,
@@ -10,7 +9,7 @@ import {
   SITE_TITLE,
   SITE_URL
 } from "@/lib/site";
-import { layoutCopy, navLabels } from "@/lib/i18n";
+import { layoutCopy } from "@/lib/i18n";
 import { getLangFromCookies } from "@/lib/i18n-server";
 
 export const metadata: Metadata = {
@@ -31,9 +30,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const year = new Date().getFullYear();
   const lang = getLangFromCookies();
-  const nav = navLabels[lang];
   const copy = layoutCopy[lang];
 
   return (
@@ -43,75 +40,34 @@ export default function RootLayout({
           Skip to content
         </a>
         <div className="layout">
-          <aside className="left-rail" aria-hidden="true">
-            <span className="rail-letter">M</span>
-            <span className="rail-letter">A</span>
-            <span className="rail-letter">P</span>
+          <aside className="left-rail">
+            <Link className="rail-brand" href="/">
+              Micky Arratoon
+            </Link>
+            <span className="rail-word" aria-hidden="true">
+              ARRATOON
+            </span>
           </aside>
 
           <div className="site-shell">
-            <header className="masthead">
-              <div className="masthead-text">
-                <Link className="brand" href="/">
-                  Michaela Arratoon Pearson
-                </Link>
-                <div className="masthead-sub">
-                  {copy.mastheadSub}
-                </div>
-              </div>
-              <div className="masthead-meta">
-                <input
-                  className="ghost-input"
-                  type="search"
-                  placeholder="Search… (coming soon)"
-                  disabled
-                  aria-label="Search placeholder"
-                />
-                <LanguageSwitch lang={lang} />
-              </div>
+            <header className="site-tools">
+              <LanguageSwitch lang={lang} />
             </header>
-
-            <div className="top-nav">
-              <TopNav labels={nav} />
-            </div>
-
-            <div className="headline-bar">
-              <span className="headline-tag">{copy.headlineTag}</span>
-              <span className="headline-note">{copy.headlineNote}</span>
-            </div>
 
             <div className="content-grid">
               <main id="content" className="site-main">
                 {children}
-                <footer className="site-footer">
-                  <span>Copyright {year} MNAP</span>
-                  <span>Last updated {LAST_UPDATED}</span>
-                </footer>
               </main>
 
-              <aside className="info-panel" aria-label="Contact and notes">
+              <aside
+                className="info-panel"
+                aria-label={`${copy.info.contactHeading} / ${copy.info.notesHeading}`}
+              >
                 <div className="info-section">
-                  <div className="info-heading">{copy.info.contactHeading}</div>
+                  <div className="info-heading">{copy.info.studioHeading}</div>
                   <p>{copy.info.contactLines[0]}</p>
                   <p>
-                    <a href="mailto:marratoon@gmail.com">{copy.info.contactLines[1]}</a>
-                  </p>
-                  <p>
-                    <a
-                      href="https://www.linkedin.com/in/michaela-arratoon"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      LinkedIn
-                    </a>
-                    {" / "}
-                    <a
-                      href="https://www.instagram.com/mickyarratoon/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Instagram
-                    </a>
+                    <a href="mailto:mickyarratoon@proton.me">{copy.info.contactLines[1]}</a>
                   </p>
                 </div>
 
@@ -122,14 +78,35 @@ export default function RootLayout({
                   ))}
                 </div>
 
-                <div className="info-section">
-                  <div className="info-heading">{copy.info.notesHeading}</div>
-                  {copy.info.notesBody.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
+                <div className="info-section info-social">
+                  <div className="social-links">
+                    <a
+                      href="https://www.instagram.com/mickyarratoon/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {copy.info.instagramLabel}
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/michaela-arratoon"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {copy.info.linkedinLabel}
+                    </a>
+                    <a href="mailto:mickyarratoon@proton.me">{copy.info.contactLabel}</a>
+                  </div>
+                  <div className="site-mark site-mark-inline" aria-hidden="true">
+                    <span>Micky</span>
+                    <span>Arratoon</span>
+                  </div>
                 </div>
               </aside>
             </div>
+            <footer className="site-footer">
+              <span>Copyright 2026 MAP</span>
+              <span>{copy.info.updatedLabel} {LAST_UPDATED}</span>
+            </footer>
           </div>
         </div>
       </body>

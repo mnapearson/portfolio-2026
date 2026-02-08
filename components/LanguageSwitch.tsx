@@ -30,7 +30,7 @@ export default function LanguageSwitch({ lang }: Props) {
       aria-label={label}
       disabled={isPending}
     >
-      {lang.toUpperCase()}
+      {nextLang.toUpperCase()}
     </button>
   );
 }

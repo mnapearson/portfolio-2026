@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProductions, hasPublicFile } from "@/lib/content";
 import { localizeProduction, productionsCopy } from "@/lib/i18n";
-import { getLangFromCookies } from "@/lib/i18n-server";
+import { getLangContext } from "@/lib/i18n-server";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Productions — Michaela Arratoon Pearson",
@@ -11,12 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function ProductionsPage() {
-  const lang = getLangFromCookies();
+  const { lang, nav } = getLangContext();
   const t = productionsCopy[lang];
   const productions = getProductions().map((item) => localizeProduction(item, lang));
 
   return (
     <div>
+      <PageHeader title={nav.productions} navLabels={nav} />
       <p>{t.intro}</p>
       {productions.map((item) => {
         const imageSrc =
@@ -55,9 +57,8 @@ export default function ProductionsPage() {
             <p>{item.summary}</p>
             {item.website ? (
               <p className="entry-link">
-                {t.websiteLabel}:{" "}
                 <a href={item.website} rel="noreferrer" target="_blank">
-                  {item.website}
+                  {t.websiteLabel.toUpperCase()}
                 </a>
               </p>
             ) : null}

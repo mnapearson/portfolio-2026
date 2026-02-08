@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduction, getProductions, hasPublicFile } from "@/lib/content";
 import { localizeProduction, productionsCopy } from "@/lib/i18n";
-import { getLangFromCookies } from "@/lib/i18n-server";
+import { getLangContext } from "@/lib/i18n-server";
+import PageHeader from "@/components/PageHeader";
 
 export function generateStaticParams() {
   return getProductions().map((item) => ({ slug: item.slug }));
@@ -31,7 +32,7 @@ export default function ProductionDetailPage({
 }: {
   params: { slug: string };
 }) {
-  const lang = getLangFromCookies();
+  const { lang, nav } = getLangContext();
   const t = productionsCopy[lang];
   const productionBase = getProduction(params.slug);
   const production = productionBase
@@ -57,6 +58,7 @@ export default function ProductionDetailPage({
 
   return (
     <div>
+      <PageHeader title={production.title} navLabels={nav} />
       {imageSrc ? (
         <a
           className="entry-image-link"
@@ -75,7 +77,6 @@ export default function ProductionDetailPage({
           />
         </a>
       ) : null}
-      <h1 className="page-title">{production.title}</h1>
       <h2 className="section-title">{t.overviewTitle}</h2>
       <p>{production.summary}</p>
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/site";
 import { homeCopy } from "@/lib/i18n";
-import { getLangFromCookies } from "@/lib/i18n-server";
+import { getLangContext } from "@/lib/i18n-server";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -9,11 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const lang = getLangFromCookies();
+  const { lang, nav } = getLangContext();
   const t = homeCopy[lang];
+  const title = lang === "de" ? "Profil" : "Profile";
 
   return (
     <div>
+      <PageHeader title={title} navLabels={nav} />
       <h2 className="section-title">{t.whoTitle}</h2>
       <p>{t.whoBody}</p>
 
@@ -22,26 +25,24 @@ export default function HomePage() {
 
       <h2 className="section-title">{t.contactTitle}</h2>
       <p>
-        {t.emailLabel}: <a href="mailto:marratoon@gmail.com">marratoon@gmail.com</a>
+        <a href="mailto:mickyarratoon@proton.me">EMAIL</a>
       </p>
       <p>
-        {t.instagramLabel}:{" "}
         <a
           href="https://www.instagram.com/mickyarratoon/"
           target="_blank"
           rel="noreferrer"
         >
-          https://www.instagram.com/mickyarratoon/
+          INSTAGRAM
         </a>
       </p>
       <p>
-        {t.linkedinLabel}:{" "}
         <a
           href="https://www.linkedin.com/in/michaela-arratoon"
           target="_blank"
           rel="noreferrer"
         >
-          https://www.linkedin.com/in/michaela-arratoon
+          LINKEDIN
         </a>
       </p>
     </div>

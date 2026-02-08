@@ -35,6 +35,11 @@ export const layoutCopy: Record<
       currentlyBody: string[];
       notesHeading: string;
       notesBody: string[];
+      studioHeading: string;
+      instagramLabel: string;
+      linkedinLabel: string;
+      contactLabel: string;
+      updatedLabel: string;
     };
   }
 > = {
@@ -46,7 +51,7 @@ export const layoutCopy: Record<
       contactHeading: "Contact",
       contactLines: [
         "Leipzig, Germany (CET/CEST) — remote friendly",
-        "marratoon@gmail.com",
+        "mickyarratoon@proton.me",
         "LinkedIn / Instagram"
       ],
       currentlyHeading: "Currently",
@@ -58,7 +63,12 @@ export const layoutCopy: Record<
       notesBody: [
         "Projects span software delivery, publishing, and event coordination.",
         "Calm communication and clear writing first."
-      ]
+      ],
+      studioHeading: "Studio",
+      instagramLabel: "Instagram",
+      linkedinLabel: "LinkedIn",
+      contactLabel: "Contact",
+      updatedLabel: "Last updated"
     }
   },
   de: {
@@ -69,7 +79,7 @@ export const layoutCopy: Record<
       contactHeading: "Kontakt",
       contactLines: [
         "Leipzig, Deutschland (CET/CEST) — remote-freundlich",
-        "marratoon@gmail.com",
+        "mickyarratoon@proton.me",
         "LinkedIn / Instagram"
       ],
       currentlyHeading: "Aktuell",
@@ -81,7 +91,12 @@ export const layoutCopy: Record<
       notesBody: [
         "Projekte umfassen Software-Delivery, Publishing und Veranstaltungskoordination.",
         "Ruhige Kommunikation und klare Sprache zuerst."
-      ]
+      ],
+      studioHeading: "Studio",
+      instagramLabel: "Instagram",
+      linkedinLabel: "LinkedIn",
+      contactLabel: "Kontakt",
+      updatedLabel: "Zuletzt aktualisiert"
     }
   }
 };
@@ -163,7 +178,7 @@ export const projectsCopy = {
 export const productsCopy = {
   en: {
     intro:
-      "A small selection of products I've contributed to across web, platform, and internal software. Where details are sensitive, they are kept high level.",
+      "A small selection of products I've contributed to across web, platform, and internal software.",
     entries: [
       {
         title: "eos archive",
@@ -230,7 +245,7 @@ export const productsCopy = {
 export const productionsCopy = {
   en: {
     intro:
-      "Selected cultural productions where I held creative and operational roles across teams, schedules, and partners.",
+      "Selected cultural productions where I held creative and operational roles.",
     roleLabel: "Role",
     websiteLabel: "Website",
     backLabel: "Back to productions",
