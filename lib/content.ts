@@ -11,6 +11,7 @@ export type Production = {
   summary: string;
   website?: string;
   image?: string;
+  photos?: string[];
 };
 
 const contentDir = path.join(process.cwd(), "content");

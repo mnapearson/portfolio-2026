@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { getProductions, hasPublicFile } from "@/lib/content";
+import { getProductions } from "@/lib/content";
 import { localizeProduction, productionsCopy } from "@/lib/i18n";
 import { getLangContext } from "@/lib/i18n-server";
 import PageHeader from "@/components/PageHeader";
@@ -21,30 +20,8 @@ export default function ProductionsPage() {
       <PageHeader title={nav.productions} navLabels={nav} />
       <p>{t.intro}</p>
       {productions.map((item) => {
-        const imageSrc =
-          item.image && hasPublicFile(item.image) ? item.image : null;
-
         return (
           <div key={item.slug} className="entry">
-            {imageSrc ? (
-              <a
-                className="entry-image-link"
-                href={imageSrc}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  className="entry-image"
-                  src={imageSrc}
-                  alt={`${item.title} cover`}
-                  width={1400}
-                  height={900}
-                  sizes="(min-width: 1400px) 980px, (min-width: 900px) 70vw, 100vw"
-                  quality={70}
-                  loading="lazy"
-                />
-              </a>
-            ) : null}
             <div className="entry-head">
               <Link className="entry-title" href={`/productions/${item.slug}`}>
                 {item.title}

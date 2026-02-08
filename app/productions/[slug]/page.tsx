@@ -42,10 +42,16 @@ export default function ProductionDetailPage({
     notFound();
   }
 
-  const imageSrc =
-    production.image && hasPublicFile(production.image)
-      ? production.image
-      : null;
+  const photoSources = (production.photos ?? [])
+    .filter((photo) => hasPublicFile(photo))
+    .slice(0, 3);
+  if (
+    photoSources.length === 0 &&
+    production.image &&
+    hasPublicFile(production.image)
+  ) {
+    photoSources.push(production.image);
+  }
   const details = [
     { label: "Role", value: production.role },
     { label: "Dates", value: production.years },
@@ -59,23 +65,28 @@ export default function ProductionDetailPage({
   return (
     <div>
       <PageHeader title={production.title} navLabels={nav} />
-      {imageSrc ? (
-        <a
-          className="entry-image-link"
-          href={imageSrc}
-          target="_blank"
-          rel="noreferrer">
-          <Image
-            className="entry-image"
-            src={imageSrc}
-            alt={`${production.title} cover`}
-            width={1600}
-            height={1000}
-            sizes="(min-width: 1400px) 980px, (min-width: 900px) 70vw, 100vw"
-            quality={70}
-            loading="lazy"
-          />
-        </a>
+      {photoSources.length > 0 ? (
+        <div className="production-gallery">
+          {photoSources.map((photo, index) => (
+            <a
+              key={`${photo}-${index}`}
+              className="production-gallery-link"
+              href={photo}
+              target="_blank"
+              rel="noreferrer">
+              <Image
+                className="production-gallery-image"
+                src={photo}
+                alt={`${production.title} photo ${index + 1}`}
+                width={1600}
+                height={1000}
+                sizes="(min-width: 1400px) 320px, (min-width: 900px) 31vw, 100vw"
+                quality={70}
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
       ) : null}
       <h2 className="section-title">{t.overviewTitle}</h2>
       <p>{production.summary}</p>

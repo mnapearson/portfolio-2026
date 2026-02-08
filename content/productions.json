@@ -9,7 +9,12 @@
     "location": "Schloss Brollin",
     "summary": "A festival blending classical, electronic, and experimental music. I lead the Kidz Space area, coordinating planning, setup, and on-site delivery with the wider festival team.",
     "website": "https://detectclassic.com/festival",
-    "image": "/productions/detect/cover.png"
+    "image": "/productions/detect/cover.png",
+    "photos": [
+      "/productions/detect/photo-1.jpg",
+      "/productions/detect/photo-2.jpg",
+      "/productions/detect/photo-3.jpg"
+    ]
   },
 
   {
@@ -21,7 +26,12 @@
     "duration": "5 days",
     "location": "Historic castle venues in Germany & Poland",
     "summary": "A chamber music festival setting with a curated program and guest experience. I supported program coordination and the moving parts around schedules, communication, and delivery across the team.",
-    "image": "/productions/goldmund/cover.png"
+    "image": "/productions/goldmund/cover.png",
+    "photos": [
+      "/productions/goldmund/photo-1.jpg",
+      "/productions/goldmund/photo-2.jpg",
+      "/productions/goldmund/photo-3.jpg"
+    ]
   },
 
   {
@@ -32,7 +42,12 @@
     "scale": "8 families",
     "summary": "A family-focused exhibition at Modos Dever in Leipzig. I contributed a piece with my daughter and supported the organisation of the exhibition.",
     "website": "https://www.modos-dever.com/programme/family-heirlooms",
-    "image": "/productions/family-heirlooms/cover.png"
+    "image": "/productions/family-heirlooms/cover.png",
+    "photos": [
+      "/productions/family-heirlooms/photo-1.jpg",
+      "/productions/family-heirlooms/photo-2.jpg",
+      "/productions/family-heirlooms/photo-3.jpg"
+    ]
   },
 
   {
@@ -45,7 +60,12 @@
     "location": "Hamburg Congress Center",
     "summary": "A large-scale annual conference by the Chaos Computer Club. I worked on event management and coordination, helping keep planning, communication, and delivery aligned across teams.",
     "website": "https://events.ccc.de/en/congress/",
-    "image": "/productions/ccc/cover.png"
+    "image": "/productions/ccc/cover.png",
+    "photos": [
+      "/productions/ccc/photo-1.jpg",
+      "/productions/ccc/photo-2.jpg",
+      "/productions/ccc/photo-3.jpg"
+    ]
   },
 
   {
@@ -57,6 +77,11 @@
     "duration": "2 days",
     "location": "Leipzig",
     "summary": "A one-off cultural event with live programming and production coordination. I supported event management and on-the-ground delivery across partners and schedules.",
-    "image": "/productions/octopus-garden/cover.png"
+    "image": "/productions/octopus-garden/cover.png",
+    "photos": [
+      "/productions/octopus-garden/photo-1.jpg",
+      "/productions/octopus-garden/photo-2.jpg",
+      "/productions/octopus-garden/photo-3.jpg"
+    ]
   }
 ]
