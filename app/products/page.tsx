@@ -1,96 +1,44 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import { productsCopy } from "@/lib/i18n";
+import { getLangFromCookies } from "@/lib/i18n-server";
 
 export const metadata: Metadata = {
-  title: 'Products — Micky Arratoon',
-  description: 'Product-adjacent delivery support and coordination.',
+  title: "Products — Micky Arratoon",
+  description: "Product-adjacent delivery support and coordination."
 };
 
 export default function ProductsPage() {
+  const lang = getLangFromCookies();
+  const t = productsCopy[lang];
+
   return (
     <div>
-      <p>
-        A small selection of products I've contributed to across web, platform,
-        and internal software. Where details are sensitive, they are kept high
-        level.
-      </p>
+      <p>{t.intro}</p>
 
-      <div className='entry'>
-        <div className='entry-head'>
-          <div className='entry-title'>eos archive</div>
-          <div className='entry-dates'>Oct 2022 – present</div>
+      {t.entries.map((entry) => (
+        <div key={entry.title} className="entry">
+          <div className="entry-head">
+            <div className="entry-title">{entry.title}</div>
+            <div className="entry-dates">{entry.dates}</div>
+          </div>
+          <div className="entry-role">{entry.role}</div>
+          <p>{entry.body}</p>
+          <p className="entry-link">
+            {entry.websiteLabel}:{" "}
+            <a href={entry.websiteUrl} rel="noreferrer" target="_blank">
+              {entry.websiteUrl}
+            </a>
+          </p>
+          {entry.socialUrl ? (
+            <p className="entry-link">
+              {entry.socialLabel}:{" "}
+              <a href={entry.socialUrl} rel="noreferrer" target="_blank">
+                {entry.socialUrl}
+              </a>
+            </p>
+          ) : null}
         </div>
-        <div className='entry-role'>Role: Founder and product lead</div>
-        <p>
-          An independent event culture archive and platform, developed alongside
-          an ongoing publishing practice. Work includes product iteration,
-          platform coordination, and building a consistent archive through
-          curation and publishing.
-        </p>
-        <p className='entry-link'>
-          Website:{' '}
-          <a
-            href='https://eosarchive.app'
-            rel='noreferrer'
-            target='_blank'>
-            https://eosarchive.app
-          </a>
-        </p>
-        <p className='entry-link'>
-          Social:{' '}
-          <a
-            href='https://instagram.com/eosarchive.app/'
-            rel='noreferrer'
-            target='_blank'>
-            https://instagram.com/eosarchive.app/
-          </a>{' '}
-        </p>
-      </div>
-
-      <div className='entry'>
-        <div className='entry-head'>
-          <div className='entry-title'>EKD internal platform</div>
-          <div className='entry-dates'>Aug 2022 – Jul 2024</div>
-        </div>
-        <div className='entry-role'>Role: Project Manager (team of 15)</div>
-        <p>
-          Project management for an internal platform, including coordination of
-          a legacy refactor. Work covered planning and milestones, delivery
-          coordination across a 15-person team, stakeholder alignment,
-          documentation, and meeting facilitation. Tools used included Jira,
-          Confluence, Bitbucket, BigPicture, Trello, Slack, Google Workspace,
-          Clockify, and GitHub.
-        </p>
-        <p className='entry-link'>
-          Website:{' '}
-          <a
-            href='https://www.ekd-solar.de/#owner'
-            rel='noreferrer'
-            target='_blank'>
-            https://www.ekd-solar.de/#owner
-          </a>
-        </p>
-      </div>
-
-      <div className='entry'>
-        <div className='entry-head'>
-          <div className='entry-title'>Riese &amp; Müller online shop</div>
-          <div className='entry-dates'>Apr 2022 – Jul 2022</div>
-        </div>
-        <div className='entry-role'>Role: Developer</div>
-        <p>
-          Development work for an e-commerce website, with a focus on improving
-          structure and keeping the build clean and navigable.
-        </p>
-        <p className='entry-link'>
-          Website:{' '}
-          <a
-            href='https://www.r-m.de/de/bikes/'
-            rel='noreferrer'
-            target='_blank'>
-            https://www.r-m.de/de/bikes/
-          </a>
-        </p>
-      </div>
+      ))}
     </div>
   );
 }

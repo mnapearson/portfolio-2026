@@ -3,11 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
-  { href: "/projects", label: "Projects" },
-  { href: "/products", label: "Products" },
-  { href: "/productions", label: "Productions" }
-];
+type Props = {
+  labels: { projects: string; products: string; productions: string };
+};
 
 function isActive(pathname: string, href: string) {
   if (href === "/") {
@@ -17,8 +15,13 @@ function isActive(pathname: string, href: string) {
   return pathname.startsWith(href);
 }
 
-export default function TopNav() {
+export default function TopNav({ labels }: Props) {
   const pathname = usePathname();
+  const links = [
+    { href: "/projects", label: labels.projects },
+    { href: "/products", label: labels.products },
+    { href: "/productions", label: labels.productions }
+  ];
 
   return (
     <nav aria-label="Primary">

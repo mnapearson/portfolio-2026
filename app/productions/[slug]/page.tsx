@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduction, getProductions, hasPublicFile } from "@/lib/content";
+import { localizeProduction, productionsCopy } from "@/lib/i18n";
+import { getLangFromCookies } from "@/lib/i18n-server";
 
 export function generateStaticParams() {
   return getProductions().map((item) => ({ slug: item.slug }));
@@ -29,7 +31,12 @@ export default function ProductionDetailPage({
 }: {
   params: { slug: string };
 }) {
-  const production = getProduction(params.slug);
+  const lang = getLangFromCookies();
+  const t = productionsCopy[lang];
+  const productionBase = getProduction(params.slug);
+  const production = productionBase
+    ? localizeProduction(productionBase, lang)
+    : undefined;
   if (!production) {
     notFound();
   }
@@ -69,22 +76,24 @@ export default function ProductionDetailPage({
         </a>
       ) : null}
       <h1 className="page-title">{production.title}</h1>
-      <h2 className="section-title">Overview</h2>
+      <h2 className="section-title">{t.overviewTitle}</h2>
       <p>{production.summary}</p>
 
-      <h2 className="section-title">Details</h2>
+      <h2 className="section-title">{t.detailsTitle}</h2>
       <ul className="list">
         {details.map((item) => (
           <li
             key={item.label}
             className="list-item">
-            {item.label}: {item.value}
+            {t.detailLabels[item.label.toLowerCase() as keyof typeof t.detailLabels] ??
+              item.label}
+            : {item.value}
           </li>
         ))}
       </ul>
 
       <p className="meta">
-        <Link href="/productions">Back to productions</Link>
+        <Link href="/productions">{t.backLabel}</Link>
       </p>
     </div>
   );
