@@ -36,6 +36,7 @@ export const layoutCopy: Record<
       notesHeading: string;
       notesBody: string[];
       studioHeading: string;
+      availabilityLine: string;
       instagramLabel: string;
       linkedinLabel: string;
       contactLabel: string;
@@ -56,8 +57,8 @@ export const layoutCopy: Record<
       ],
       currentlyHeading: "Currently",
       currentlyBody: [
-        "Delivery consulting for digital teams; cultural production with eos archive and festivals.",
-        "Available for part-time retainers and short project sprints."
+        "PROJECT DELIVERY FOR DIGITAL TEAMS; CULTURAL PRODUCTION WITH EOS ARCHIVE AND FESTIVALS.",
+        "OPEN TO FULL-TIME ROLES (LEIPZIG / REMOTE)."
       ],
       notesHeading: "Notes",
       notesBody: [
@@ -65,6 +66,7 @@ export const layoutCopy: Record<
         "Calm communication and clear writing first."
       ],
       studioHeading: "Studio",
+      availabilityLine: "OPEN TO FULL-TIME · SELECTIVE INDEPENDENT WORK",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
       contactLabel: "Contact",
@@ -84,8 +86,8 @@ export const layoutCopy: Record<
       ],
       currentlyHeading: "Aktuell",
       currentlyBody: [
-        "Delivery-Beratung für digitale Teams; Kulturproduktionen mit eos archive und Festivals.",
-        "Verfügbar für Teilzeit-Retainer und kurze Projektsprints."
+        "Projektdelivery für digitale Teams; Kulturproduktionen mit eos archive und Festivals.",
+        "Offen für Vollzeitrollen (Leipzig / remote)."
       ],
       notesHeading: "Hinweise",
       notesBody: [
@@ -93,6 +95,7 @@ export const layoutCopy: Record<
         "Ruhige Kommunikation und klare Sprache zuerst."
       ],
       studioHeading: "Studio",
+      availabilityLine: "Offen für Vollzeit · selektive unabhängige Arbeit",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
       contactLabel: "Kontakt",
@@ -105,7 +108,7 @@ export const homeCopy = {
   en: {
     whoTitle: "Who I am",
     whoBody:
-      "I’m a freelance project manager and web developer based in Leipzig. I work with software and digital teams to keep delivery clear and steady, and I also create and coordinate cultural productions. I care a lot about calm communication and clear writing. I’m usually the person who keeps the thread between people, decisions, and delivery, especially when things get busy.",
+      "I’M A PROJECT MANAGER AND WEB DEVELOPER BASED IN LEIPZIG. I WORK WITH SOFTWARE AND DIGITAL TEAMS TO KEEP DELIVERY CLEAR AND STEADY, AND I ALSO CREATE AND COORDINATE CULTURAL PRODUCTIONS. I CARE A LOT ABOUT CALM COMMUNICATION AND CLEAR WRITING. I’M USUALLY THE PERSON WHO KEEPS THE THREAD BETWEEN PEOPLE, DECISIONS, AND DELIVERY, ESPECIALLY WHEN THINGS GET BUSY.",
     whatTitle: "What I do",
     whatBody:
       "I help teams define scope and milestones, keep backlogs clear, facilitate planning and meetings, align stakeholders, track dependencies and risks, and improve workflows so delivery stays steady and understandable.",
@@ -117,7 +120,7 @@ export const homeCopy = {
   de: {
     whoTitle: "Wer ich bin",
     whoBody:
-      "Ich bin freiberufliche Projektmanagerin und Webentwicklerin in Leipzig. Ich arbeite mit Software- und Digital-Teams, damit Delivery klar und stabil bleibt, und koordiniere außerdem kulturelle Produktionen. Mir sind ruhige Kommunikation und klare Sprache wichtig. Oft halte ich den Faden zwischen Menschen, Entscheidungen und Umsetzung – besonders, wenn es hektisch wird.",
+      "Ich bin Projektmanagerin und Webentwicklerin in Leipzig. Ich arbeite mit Software- und Digital-Teams, damit Delivery klar und stabil bleibt, und koordiniere außerdem kulturelle Produktionen. Mir sind ruhige Kommunikation und klare Sprache wichtig. Oft halte ich den Faden zwischen Menschen, Entscheidungen und Umsetzung – besonders, wenn es hektisch wird.",
     whatTitle: "Was ich mache",
     whatBody:
       "Ich unterstütze Teams bei Scope und Meilensteinen, halte Backlogs übersichtlich, moderiere Planung und Meetings, gleiche Stakeholder ab, verfolge Abhängigkeiten und Risiken und verbessere Workflows, damit Delivery konstant und nachvollziehbar bleibt.",
@@ -131,7 +134,7 @@ export const homeCopy = {
 export const projectsCopy = {
   en: {
     intro:
-      "Freelance project management and development for software and digital teams. The focus is delivery: keeping work clear, coordinated, and moving. This can include delivery planning, sprint support, backlog clarity (scope, tickets, acceptance criteria), stakeholder alignment, documentation, dependency and risk tracking, release support, and practical workflow improvements.",
+      "PROJECT DELIVERY AND DEVELOPMENT SUPPORT FOR SOFTWARE AND DIGITAL TEAMS. THE FOCUS IS DELIVERY: KEEPING WORK CLEAR, COORDINATED, AND MOVING. THIS CAN INCLUDE DELIVERY PLANNING, SPRINT SUPPORT, BACKLOG CLARITY (SCOPE, TICKETS, ACCEPTANCE CRITERIA), STAKEHOLDER ALIGNMENT, DOCUMENTATION, DEPENDENCY AND RISK TRACKING, RELEASE SUPPORT, AND PRACTICAL WORKFLOW IMPROVEMENTS.",
     whatTitle: "What I deliver",
     whatItems: [
       "Delivery planning and milestone tracking.",
@@ -153,7 +156,7 @@ export const projectsCopy = {
   },
   de: {
     intro:
-      "Freiberufliches Projektmanagement und Entwicklung für Software- und Digital-Teams. Fokus: Delivery – Arbeit klar, abgestimmt und in Bewegung halten. Dazu gehören Delivery-Planung, Sprint-Support, Backlog-Klarheit (Scope, Tickets, Akzeptanzkriterien), Stakeholder-Abstimmung, Dokumentation, Abhängigkeits- und Risiko-Tracking, Release-Support und pragmatische Workflow-Verbesserungen.",
+      "Projektdelivery und Entwicklungsunterstützung für Software- und Digital-Teams. Fokus: Delivery – Arbeit klar, abgestimmt und in Bewegung halten. Dazu gehören Delivery-Planung, Sprint-Support, Backlog-Klarheit (Scope, Tickets, Akzeptanzkriterien), Stakeholder-Abstimmung, Dokumentation, Abhängigkeits- und Risiko-Tracking, Release-Support und pragmatische Workflow-Verbesserungen.",
     whatTitle: "Was ich liefere",
     whatItems: [
       "Delivery-Planung und Meilenstein-Tracking.",

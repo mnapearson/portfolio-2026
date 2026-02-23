@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import LanguageSwitch from "@/components/LanguageSwitch";
+import RailWord from "@/components/RailWord";
 import {
   LAST_UPDATED,
   SITE_DESCRIPTION,
@@ -44,9 +45,7 @@ export default function RootLayout({
             <Link className="rail-brand" href="/">
               Micky Arratoon
             </Link>
-            <span className="rail-word" aria-hidden="true">
-              ARRATOON
-            </span>
+            <RailWord />
           </aside>
 
           <div className="site-shell">
@@ -66,6 +65,7 @@ export default function RootLayout({
                 <div className="info-section">
                   <div className="info-heading">{copy.info.studioHeading}</div>
                   <p>{copy.info.contactLines[0]}</p>
+                  <p>{copy.info.availabilityLine}</p>
                   <p>
                     <a href="mailto:mickyarratoon@proton.me">{copy.info.contactLines[1]}</a>
                   </p>
