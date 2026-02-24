@@ -25,11 +25,15 @@ export default function ProductsPage() {
           </div>
           <div className="entry-role">{entry.role}</div>
           <p>{entry.body}</p>
-          <p className="entry-link">
-            <a href={entry.websiteUrl} rel="noreferrer" target="_blank">
-              {entry.websiteLabel.toUpperCase()}
-            </a>
-          </p>
+          <p>Focus: {entry.focus}</p>
+          {entry.traction ? <p>Traction: {entry.traction}</p> : null}
+          {entry.websiteUrl ? (
+            <p className="entry-link">
+              <a href={entry.websiteUrl} rel="noreferrer" target="_blank">
+                {entry.websiteLabel.toUpperCase()}
+              </a>
+            </p>
+          ) : null}
           {entry.socialUrl ? (
             <p className="entry-link">
               <a href={entry.socialUrl} rel="noreferrer" target="_blank">

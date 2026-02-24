@@ -23,6 +23,11 @@ export default function HomePage() {
       <h2 className="section-title">{t.whatTitle}</h2>
       <p>{t.whatBody}</p>
 
+      <h2 className="section-title">{t.downloadTitle}</h2>
+      <p>
+        <a href="/assets/Michaela_Arratoon_Pearson_CV.pdf">{t.cvLabel}</a>
+      </p>
+
       <h2 className="section-title">{t.contactTitle}</h2>
       <p>
         <a href="mailto:mickyarratoon@proton.me">EMAIL</a>

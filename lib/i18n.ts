@@ -31,6 +31,8 @@ export const layoutCopy: Record<
     info: {
       contactHeading: string;
       contactLines: string[];
+      applyingLine: string;
+      cvLabel: string;
       currentlyHeading: string;
       currentlyBody: string[];
       notesHeading: string;
@@ -51,15 +53,14 @@ export const layoutCopy: Record<
     info: {
       contactHeading: "Contact",
       contactLines: [
-        "Leipzig, Germany (CET/CEST) — remote friendly",
+        "Leipzig, Germany (CET/CEST), remote friendly",
         "mickyarratoon@proton.me",
         "LinkedIn / Instagram"
       ],
+      applyingLine: "Applying as: Michaela Arratoon Pearson",
+      cvLabel: "CV: Download (PDF)",
       currentlyHeading: "Currently",
-      currentlyBody: [
-        "PROJECT DELIVERY FOR DIGITAL TEAMS; CULTURAL PRODUCTION WITH EOS ARCHIVE AND FESTIVALS.",
-        "OPEN TO FULL-TIME ROLES (LEIPZIG / REMOTE)."
-      ],
+      currentlyBody: ["Product delivery for digital teams, founder-builder of eos archive"],
       notesHeading: "Notes",
       notesBody: [
         "Projects span software delivery, publishing, and event coordination.",
@@ -84,6 +85,8 @@ export const layoutCopy: Record<
         "mickyarratoon@proton.me",
         "LinkedIn / Instagram"
       ],
+      applyingLine: "Bewerbung als: Michaela Arratoon Pearson",
+      cvLabel: "CV: Download (PDF)",
       currentlyHeading: "Aktuell",
       currentlyBody: [
         "Projektdelivery für digitale Teams; Kulturproduktionen mit eos archive und Festivals.",
@@ -108,10 +111,12 @@ export const homeCopy = {
   en: {
     whoTitle: "Who I am",
     whoBody:
-      "I’M A PROJECT MANAGER AND WEB DEVELOPER BASED IN LEIPZIG. I WORK WITH SOFTWARE AND DIGITAL TEAMS TO KEEP DELIVERY CLEAR AND STEADY, AND I ALSO CREATE AND COORDINATE CULTURAL PRODUCTIONS. I CARE A LOT ABOUT CALM COMMUNICATION AND CLEAR WRITING. I’M USUALLY THE PERSON WHO KEEPS THE THREAD BETWEEN PEOPLE, DECISIONS, AND DELIVERY, ESPECIALLY WHEN THINGS GET BUSY.",
+      "I'm a product-minded project manager with a hands-on engineering background (Full-Stack), based in Leipzig. I ship internal tools and e-commerce products with cross-functional teams, keeping delivery clear and steady. I also build eos archive (eosarchive.app), where I own roadmap, discovery, and end-to-end delivery.",
     whatTitle: "What I do",
     whatBody:
-      "I help teams define scope and milestones, keep backlogs clear, facilitate planning and meetings, align stakeholders, track dependencies and risks, and improve workflows so delivery stays steady and understandable.",
+      "I help teams turn priorities into shipped work: clarify goals, shape scope, keep backlogs clean, write clear tickets and acceptance criteria, and keep dependencies and risks visible. I care about calm communication, reliable follow-through, and shipping on a predictable cadence.",
+    downloadTitle: "Download",
+    cvLabel: "CV (PDF)",
     contactTitle: "Contact",
     emailLabel: "Email",
     instagramLabel: "Instagram",
@@ -124,6 +129,8 @@ export const homeCopy = {
     whatTitle: "Was ich mache",
     whatBody:
       "Ich unterstütze Teams bei Scope und Meilensteinen, halte Backlogs übersichtlich, moderiere Planung und Meetings, gleiche Stakeholder ab, verfolge Abhängigkeiten und Risiken und verbessere Workflows, damit Delivery konstant und nachvollziehbar bleibt.",
+    downloadTitle: "Download",
+    cvLabel: "CV (PDF)",
     contactTitle: "Kontakt",
     emailLabel: "E-Mail",
     instagramLabel: "Instagram",
@@ -134,25 +141,18 @@ export const homeCopy = {
 export const projectsCopy = {
   en: {
     intro:
-      "PROJECT DELIVERY AND DEVELOPMENT SUPPORT FOR SOFTWARE AND DIGITAL TEAMS. THE FOCUS IS DELIVERY: KEEPING WORK CLEAR, COORDINATED, AND MOVING. THIS CAN INCLUDE DELIVERY PLANNING, SPRINT SUPPORT, BACKLOG CLARITY (SCOPE, TICKETS, ACCEPTANCE CRITERIA), STAKEHOLDER ALIGNMENT, DOCUMENTATION, DEPENDENCY AND RISK TRACKING, RELEASE SUPPORT, AND PRACTICAL WORKFLOW IMPROVEMENTS.",
+      "I lead delivery for internal tools and e-commerce teams. The goal is simple: move work from decision to release with clarity. I focus on prioritization, ticket readiness, sprint cadence, stakeholder alignment, and release flow across parallel workstreams.",
     whatTitle: "What I deliver",
     whatItems: [
-      "Delivery planning and milestone tracking.",
-      "Sprint planning and facilitation.",
-      "Backlog clarity and ticket readiness.",
-      "Stakeholder alignment and updates.",
-      "Documentation and decision logs.",
-      "Dependency and risk tracking.",
-      "Release support and handoffs.",
-      "Workflow improvements without overhead."
+      "Delivery planning and release cadence",
+      "Backlog clarity (tickets, acceptance criteria, scope)",
+      "Sprint planning, reviews, retros",
+      "Stakeholder alignment and decision logs",
+      "Dependencies and risk visibility",
+      "Workflow improvements without overhead"
     ],
     howTitle: "How I work",
-    howItems: [
-      "Calm communication.",
-      "Clear writing.",
-      "Practical structure.",
-      "Reliable follow-through."
-    ]
+    howItems: ["Calm communication", "Clear writing", "Practical structure", "Bias to ship"]
   },
   de: {
     intro:
@@ -181,13 +181,17 @@ export const projectsCopy = {
 export const productsCopy = {
   en: {
     intro:
-      "A small selection of products I've contributed to across web, platform, and internal software.",
+      "Selected products where I led or supported technical product delivery.",
     entries: [
       {
         title: "eos archive",
         dates: "Oct 2022 – present",
-        role: "Founder and product lead",
-        body: "An independent event culture archive and platform, developed alongside an ongoing publishing practice. Work includes product iteration, platform coordination, and building a consistent archive through curation and publishing.",
+        role: "Founder-builder and product lead",
+        body: "Independent platform for event culture publishing and discovery.",
+        focus:
+          "Own roadmap, discovery, and end-to-end delivery. Define priorities, shape scope, and ship product updates across content, platform, and operations.",
+        traction:
+          "50 spaces, 100 events, ~300 newsletter subscribers, 7k+ combined audience (Instagram + Telegram)",
         websiteLabel: "Website",
         websiteUrl: "https://eosarchive.app",
         socialLabel: "Social",
@@ -197,17 +201,29 @@ export const productsCopy = {
         title: "EKD internal platform",
         dates: "Aug 2022 – Jul 2024",
         role: "Project Manager (team of 15)",
-        body: "Project management for an internal platform, including coordination of a legacy refactor. Work covered planning and milestones, delivery coordination across a 15-person team, stakeholder alignment, documentation, dependency and risk tracking, release support, and meeting facilitation. Tools used included Jira, Confluence, Bitbucket, BigPicture, Trello, Slack, Google Workspace, Clockify, and GitHub.",
+        body: "Internal platform modernization with a legacy refactor and multiple stakeholder groups.",
+        focus:
+          "Run delivery planning, backlog readiness, sprint cadence, and cross-team coordination. Keep decision-making and risks visible through clear documentation and release planning.",
         websiteLabel: "Website",
         websiteUrl: "https://www.ekd-solar.de/#owner"
       },
       {
         title: "Riese & Müller online shop",
         dates: "Apr 2022 – Jul 2022",
-        role: "Developer",
-        body: "Development work for an e-commerce website, with a focus on improving structure and keeping the build clean and navigable.",
+        role: "Full-Stack Developer",
+        body: "E-commerce webshop improvements for an established bike brand.",
+        focus:
+          "Improve frontend structure and implementation quality to support a cleaner release flow and easier maintenance for the delivery team.",
         websiteLabel: "Website",
         websiteUrl: "https://www.r-m.de/de/bikes/"
+      },
+      {
+        title: "Strollme webshop",
+        dates: "E-commerce delivery project",
+        role: "Product delivery and technical coordination",
+        body: "Webshop delivery with close coordination across product, design, and engineering.",
+        focus:
+          "Translate priorities into ticket-ready work, keep scope practical, and drive steady releases with clear ownership and communication."
       }
     ]
   },
@@ -219,7 +235,11 @@ export const productsCopy = {
         title: "eos archive",
         dates: "Okt 2022 – heute",
         role: "Gründerin und Product Lead",
-        body: "Ein unabhängiges Archiv und eine Plattform für Veranstaltungskultur, begleitet von einer laufenden Publishing-Praxis. Arbeit umfasst Produktiteration, Plattformkoordination sowie den Aufbau eines konsistenten Archivs durch Kuratierung und Veröffentlichungen.",
+        body: "Unabhängige Plattform für Veranstaltungskultur mit Publishing- und Discovery-Fokus.",
+        focus:
+          "Roadmap, Discovery und End-to-End-Delivery verantworten. Prioritäten setzen, Scope schärfen und Produktupdates über Content, Plattform und Operations ausliefern.",
+        traction:
+          "50 Räume, 100 Events, ~300 Newsletter-Abonnent:innen, 7k+ kombinierte Reichweite (Instagram + Telegram)",
         websiteLabel: "Website",
         websiteUrl: "https://eosarchive.app",
         socialLabel: "Social",
@@ -229,7 +249,9 @@ export const productsCopy = {
         title: "EKD interne Plattform",
         dates: "Aug 2022 – Jul 2024",
         role: "Projektmanagerin (Team von 15)",
-        body: "Projektmanagement für eine interne Plattform, einschließlich Koordination eines Legacy-Refactors. Arbeit umfasste Planung und Meilensteine, Delivery-Koordination über ein 15-köpfiges Team, Stakeholder-Abstimmung, Dokumentation, Abhängigkeits- und Risiko-Tracking, Release-Support und Meeting-Moderation. Tools: Jira, Confluence, Bitbucket, BigPicture, Trello, Slack, Google Workspace, Clockify und GitHub.",
+        body: "Modernisierung einer internen Plattform inklusive Legacy-Refactor und mehreren Stakeholdergruppen.",
+        focus:
+          "Delivery-Planung, Backlog-Readiness, Sprint-Takt und teamübergreifende Koordination steuern. Entscheidungen und Risiken durch klare Dokumentation und Release-Planung sichtbar halten.",
         websiteLabel: "Website",
         websiteUrl: "https://www.ekd-solar.de/#owner"
       },
@@ -237,9 +259,19 @@ export const productsCopy = {
         title: "Riese & Müller Onlineshop",
         dates: "Apr 2022 – Jul 2022",
         role: "Entwicklerin",
-        body: "Entwicklungsarbeit für einen E-Commerce-Auftritt mit Fokus auf Strukturverbesserungen und eine saubere, navigierbare Umsetzung.",
+        body: "E-Commerce-Weiterentwicklung für eine etablierte Fahrradmarke.",
+        focus:
+          "Frontend-Struktur und Implementierungsqualität verbessern, damit Releases sauberer laufen und die Wartung für das Delivery-Team einfacher wird.",
         websiteLabel: "Website",
         websiteUrl: "https://www.r-m.de/de/bikes/"
+      },
+      {
+        title: "Strollme Onlineshop",
+        dates: "E-Commerce-Delivery-Projekt",
+        role: "Product Delivery und technische Koordination",
+        body: "Webshop-Delivery in enger Abstimmung zwischen Produkt, Design und Engineering.",
+        focus:
+          "Prioritäten in ticketfähige Arbeit übersetzen, Scope pragmatisch halten und einen verlässlichen Release-Takt sichern."
       }
     ]
   }
@@ -308,7 +340,7 @@ const productionTranslations: Record<
     de: {
       role: "Mitorganisatorin und Teilnehmerin",
       summary:
-        "Familiäre Ausstellung bei Modos Dever in Leipzig. Ich steuerte ein Werk gemeinsam mit meiner Tochter bei und unterstützte die Organisation.",
+        "Gruppenausstellung bei Modos Dever in Leipzig. Ich beteiligte mich mit einem Werk und unterstützte die organisatorische Umsetzung.",
       duration: "Ausstellung Juni 2025",
       location: "Leipzig"
     }
