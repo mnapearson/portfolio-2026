@@ -53,21 +53,21 @@ export const layoutCopy: Record<
     info: {
       contactHeading: "Contact",
       contactLines: [
-        "Leipzig, Germany (CET/CEST), remote friendly",
+        "Leipzig / Berlin",
         "mickyarratoon@proton.me",
         "LinkedIn / Instagram"
       ],
       applyingLine: "Applying as: Michaela Arratoon Pearson",
       cvLabel: "CV: Download (PDF)",
       currentlyHeading: "Currently",
-      currentlyBody: ["Product delivery for digital teams, founder-builder of eos archive"],
+      currentlyBody: ["Founder of eos archive · Cultural producer · Leipzig / Berlin"],
       notesHeading: "Notes",
       notesBody: [
         "Projects span software delivery, publishing, and event coordination.",
         "Calm communication and clear writing first."
       ],
       studioHeading: "Studio",
-      availabilityLine: "OPEN TO FULL-TIME · SELECTIVE INDEPENDENT WORK",
+      availabilityLine: "Founder, eos archive · Cultural production · Open to collaboration",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
       contactLabel: "Contact",
@@ -111,10 +111,10 @@ export const homeCopy = {
   en: {
     whoTitle: "Who I am",
     whoBody:
-      "I'm a product-minded project manager with a hands-on engineering background (Full-Stack), based in Leipzig. I ship internal tools and e-commerce products with cross-functional teams, keeping delivery clear and steady. I also build eos archive (eosarchive.app), where I own roadmap, discovery, and end-to-end delivery.",
+      "Former digital nomad, based between Leipzig and Berlin. Cultural producer and founder working at the intersection of archive, technology, and community. I run eos archive, an infrastructure project for cultural documentation. My background spans event production at scale, project management, and hands-on platform development. The thread connecting all of it: an ability to see what belongs together and build the structure that makes it work.",
     whatTitle: "What I do",
     whatBody:
-      "I help teams turn priorities into shipped work: clarify goals, shape scope, keep backlogs clean, write clear tickets and acceptance criteria, and keep dependencies and risks visible. I care about calm communication, reliable follow-through, and shipping on a predictable cadence.",
+      "I work at the intersection of cultural production, community building, and technology. I produce events, build platforms, and create the infrastructure that lets creative work persist and find its audience. I also take on project management and delivery work for digital teams -- the same skillset, different stage.",
     downloadTitle: "Download",
     cvLabel: "CV (PDF)",
     contactTitle: "Contact",

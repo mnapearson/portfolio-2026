@@ -1,10 +1,10 @@
 import { execSync } from "child_process";
 
-export const SITE_NAME = "Michaela Arratoon Pearson";
+export const SITE_NAME = "Micky Arratoon";
 export const SITE_TITLE =
-  "Michaela Arratoon Pearson — Project Manager / Delivery Consultant";
+  "Micky Arratoon — Cultural Producer & Founder";
 export const SITE_DESCRIPTION =
-  "Project delivery and web development support for software, digital, and cultural projects.";
+  "Cultural producer and founder based between Leipzig and Berlin. Building eos archive — an infrastructure project for cultural documentation.";
 export const SITE_URL = "https://example.com";
 
 function getLastUpdated(): string {
