@@ -88,15 +88,6 @@ export default function RootLayout({
                   </p>
                 </div>
 
-                <div className='info-section'>
-                  <div className='info-heading'>
-                    {copy.info.currentlyHeading}
-                  </div>
-                  {copy.info.currentlyBody.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
-                </div>
-
                 <div className='info-section info-social'>
                   <div className='social-links'>
                     <a
