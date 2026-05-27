@@ -12,9 +12,11 @@ export default function ProjectsPage() {
   const { lang, nav } = getLangContext();
   const t = projectsCopy[lang];
 
+  const title = lang === "de" ? "Projekte" : "Projects";
+
   return (
     <div>
-      <PageHeader title={nav.projects} navLabels={nav} />
+      <PageHeader title={title} navLabels={nav} />
       <p>{t.intro}</p>
       <h2 className="section-title">{t.whatTitle}</h2>
       <ul className="list">
