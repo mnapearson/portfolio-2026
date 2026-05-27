@@ -73,11 +73,10 @@ export default function RootLayout({
                 className='info-panel'
                 aria-label={`${copy.info.contactHeading} / ${copy.info.notesHeading}`}>
                 <div className='info-section'>
-                  <div className='info-heading'>{copy.info.studioHeading}</div>
                   <p>{copy.info.contactLines[0]}</p>
 
                   <p>
-                    <a href='/assets/Michaela_Pearson_CV.pdf'>
+                    <a href='/downloads/CV_MickyArratoon_Cultural.html' download>
                       {copy.info.cvLabel}
                     </a>
                   </p>

@@ -8,15 +8,13 @@ export function getLang(value?: string | null): Lang {
 
 export const navLabels: Record<
   Lang,
-  { projects: string; products: string; productions: string }
+  { products: string; productions: string }
 > = {
   en: {
-    projects: "Projects",
     products: "Products",
     productions: "Productions"
   },
   de: {
-    projects: "Projekte",
     products: "Produkte",
     productions: "Produktionen"
   }

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Micky Arratoon — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white:   #FFFFFF;
+  --off:     #F8F7F5;
+  --ink:     #0E0E0E;
+  --ink-50:  rgba(14,14,14,0.5);
+  --ink-20:  rgba(14,14,14,0.12);
+  --red:     #E82020;
+  --red-dim: rgba(232,32,32,0.08);
+  --border:  rgba(14,14,14,0.12);
+  --serif: 'EB Garamond', 'Times New Roman', Times, serif;
+  --mono:  'DM Mono', 'Courier New', monospace;
+}
+
+@media print {
+  @page { margin: 1.8cm 2cm; size: A4; }
+  body { font-size: 10pt; }
+  .page { padding: 0; max-width: none; }
+}
+
+html { background: var(--white); }
+body {
+  font-family: var(--serif);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.65;
+  background: var(--white);
+}
+
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 4rem 5rem;
+}
+
+.header {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 2rem;
+}
+
+.header-name {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.header-name em {
+  font-style: italic;
+  color: var(--red);
+}
+
+.header-meta { text-align: right; }
+
+.header-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--red);
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.contact-line {
+  font-family: var(--mono);
+  font-size: 0.52rem;
+  font-weight: 300;
+  color: var(--ink-50);
+  letter-spacing: 0.08em;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.section { margin-bottom: 3rem; }
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-text {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: var(--ink);
+  max-width: 580px;
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.exp-row:last-child { border-bottom: none; }
+
+.exp-date {
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--ink-50);
+  text-transform: uppercase;
+  line-height: 1.9;
+}
+
+.exp-org {
+  font-family: var(--mono);
+  font-size: 0.52rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  line-height: 1.7;
+}
+
+.exp-role {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.exp-body {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: var(--ink-50);
+  line-height: 1.72;
+}
+
+.exp-body p { margin-bottom: 0.3rem; }
+.exp-body p:last-child { margin-bottom: 0; }
+
+.eos-block {
+  background: var(--red-dim);
+  border-left: 2px solid var(--red);
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+}
+
+.eos-block-label {
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.eos-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stat {
+  border-right: 1px solid var(--border);
+  padding-right: 1rem;
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-number {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 0.46rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+  line-height: 1.6;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.skills-list { list-style: none; }
+
+.skills-list li {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  color: var(--ink-50);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--ink-20);
+  line-height: 1.5;
+}
+
+.skills-list li:last-child { border-bottom: none; }
+.skills-list li strong { font-weight: 500; color: var(--ink); }
+
+.col-label {
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.col-label-spaced { margin-top: 1.5rem; }
+
+.doc-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-footer-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--red);
+}
+
+.doc-footer-meta {
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  font-weight: 300;
+  color: var(--ink-50);
+  letter-spacing: 0.08em;
+  text-align: right;
+  line-height: 2;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="header">
+    <div>
+      <h1 class="header-name">Micky<br><em>Arratoon</em></h1>
+    </div>
+    <div class="header-meta">
+      <div class="header-title">Cultural producer<br>&amp; founder</div>
+      <div class="contact-line">
+        Leipzig / Berlin<br>
+        mickyarratoon@proton.me<br>
+        +49 162 579 0189<br>
+        mickyarratoon.netlify.app<br>
+        linkedin.com/in/michaela-arratoon
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-label">Profile</div>
+    <p class="profile-text">Former digital nomad, based between Leipzig and Berlin. Cultural producer and founder working at the intersection of archive, technology, and community. I run eos archive, an infrastructure project for cultural documentation. My background spans event production at scale, project management, and hands-on platform development. The thread connecting all of it: an ability to see what belongs together and build the structure that makes it work.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Experience</div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-date">2022 — Present</div>
+        <div class="exp-org">eos archive<br>Leipzig / Berlin</div>
+      </div>
+      <div>
+        <div class="exp-role">Founder</div>
+        <div class="exp-body">
+          <p>Founded and built eos archive — a living archive of subcultural events, preserving event art and promoting independent cultural spaces across Leipzig and Berlin. Weekly editorial output across Instagram and Telegram. Platform built on React / Next.js / Supabase.</p>
+          <p>Define product direction, run community development, manage platform infrastructure, coordinate partner and institutional relationships.</p>
+        </div>
+        <div class="eos-block">
+          <div class="eos-block-label">eos archive — current reach</div>
+          <div class="eos-stats">
+            <div class="stat">
+              <div class="stat-number">5,500</div>
+              <div class="stat-label">Instagram followers</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">2,700</div>
+              <div class="stat-label">Telegram subscribers</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">300</div>
+              <div class="stat-label">Newsletter</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">50</div>
+              <div class="stat-label">Registered spaces</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-date">2022 — Present</div>
+        <div class="exp-org">Various<br>Leipzig / Berlin / Hamburg</div>
+      </div>
+      <div>
+        <div class="exp-role">Cultural Producer</div>
+        <div class="exp-body">
+          <p>38C3 (Chaos Communication Congress), Hamburg 2024 — production lead for Hackers Beauty Palace, within Europe's largest gathering of its kind, ~12,000 participants.</p>
+          <p>Goldmund Festival — production and on-site coordination.</p>
+          <p>Detect Classic Festival — production operations, historic castle venue.</p>
+          <p>Octopus Garden — coordination and production support.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-date">Sep 2022 — Jul 2024</div>
+        <div class="exp-org">Lipsia Digital GmbH<br>Leipzig</div>
+      </div>
+      <div>
+        <div class="exp-role">Project Manager</div>
+        <div class="exp-body">
+          <p>First PM at the company. Built Jira and Scrum workflows from scratch. Cross-functional coordination across design, development, and stakeholders. Delivered digital products end-to-end.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section">
+    <div class="section-label">Capabilities &amp; background</div>
+    <div class="two-col">
+      <div>
+        <span class="col-label">Tools &amp; platforms</span>
+        <ul class="skills-list">
+          <li><strong>Production</strong> — scheduling, logistics, vendor coordination, on-site ops</li>
+          <li><strong>Project management</strong> — Jira, Notion, Trello, Confluence</li>
+          <li><strong>Design &amp; visual</strong> — Figma, Canva, design sensibility</li>
+          <li><strong>Communication</strong> — Slack, Loom, Google Workspace</li>
+          <li><strong>Platform development</strong> — React, Next.js, Supabase, GitHub</li>
+          <li><strong>Community &amp; editorial</strong> — Instagram, Telegram, newsletter</li>
+        </ul>
+      </div>
+      <div>
+        <span class="col-label">Languages</span>
+        <ul class="skills-list">
+          <li><strong>English</strong> — native</li>
+          <li><strong>German</strong> — B2 working proficiency</li>
+          <li><strong>Spanish</strong> — B2</li>
+        </ul>
+        <span class="col-label col-label-spaced">Education</span>
+        <ul class="skills-list">
+          <li><strong>B.A. Sociology &amp; Art History</strong> — University of Vermont, 2012</li>
+          <li><strong>Full-Stack Web Development</strong> — Code Camp, 2020</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="doc-footer">
+    <div class="doc-footer-name">Micky Arratoon</div>
+    <div class="doc-footer-meta">Cultural Producer CV — May 2026<br>mickyarratoon@proton.me</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -25,7 +25,7 @@ export default function HomePage() {
 
       <h2 className="section-title">{t.downloadTitle}</h2>
       <p>
-        <a href="/assets/Michaela_Arratoon_Pearson_CV.pdf">{t.cvLabel}</a>
+        <a href="/downloads/CV_MickyArratoon_Cultural.html" download>{t.cvLabel}</a>
       </p>
 
       <h2 className="section-title">{t.contactTitle}</h2>

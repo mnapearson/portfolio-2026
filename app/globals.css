@@ -314,7 +314,7 @@ a:active {
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--ink-50);
 }
 
 .entry-role {
