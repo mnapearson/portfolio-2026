@@ -79,24 +79,21 @@ export const layoutCopy: Record<
     info: {
       contactHeading: "Kontakt",
       contactLines: [
-        "Leipzig, Deutschland (CET/CEST) — remote-freundlich",
+        "Leipzig / Berlin",
         "mickyarratoon@proton.me",
         "LinkedIn / Instagram"
       ],
       applyingLine: "Bewerbung als: Michaela Arratoon Pearson",
       cvLabel: "CV: Download (PDF)",
       currentlyHeading: "Aktuell",
-      currentlyBody: [
-        "Projektdelivery für digitale Teams; Kulturproduktionen mit eos archive und Festivals.",
-        "Offen für Vollzeitrollen (Leipzig / remote)."
-      ],
+      currentlyBody: ["Gründerin von eos archive · Kulturproduzentin · Leipzig / Berlin"],
       notesHeading: "Hinweise",
       notesBody: [
         "Projekte umfassen Software-Delivery, Publishing und Veranstaltungskoordination.",
         "Ruhige Kommunikation und klare Sprache zuerst."
       ],
       studioHeading: "Studio",
-      availabilityLine: "Offen für Vollzeit · selektive unabhängige Arbeit",
+      availabilityLine: "Gründerin, eos archive · Kulturproduktion · Offen für Zusammenarbeit",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
       contactLabel: "Kontakt",
