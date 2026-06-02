@@ -37,6 +37,7 @@ export const layoutCopy: Record<
       notesBody: string[];
       studioHeading: string;
       availabilityLine: string;
+      arenaLabel: string;
       instagramLabel: string;
       linkedinLabel: string;
       contactLabel: string;
@@ -66,6 +67,7 @@ export const layoutCopy: Record<
       ],
       studioHeading: "Studio",
       availabilityLine: "Founder, eos archive · Cultural production · Open to collaboration",
+      arenaLabel: "Are.na",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
       contactLabel: "Contact",
@@ -94,6 +96,7 @@ export const layoutCopy: Record<
       ],
       studioHeading: "Studio",
       availabilityLine: "Gründerin, eos archive · Kulturproduktion · Offen für Zusammenarbeit",
+      arenaLabel: "Are.na",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
       contactLabel: "Kontakt",

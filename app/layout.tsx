@@ -91,6 +91,12 @@ export default function RootLayout({
                 <div className='info-section info-social'>
                   <div className='social-links'>
                     <a
+                      href='https://www.are.na/micky-arratoon-tggdacs4bxi/channels'
+                      target='_blank'
+                      rel='noreferrer'>
+                      {copy.info.arenaLabel}
+                    </a>
+                    <a
                       href='https://www.instagram.com/mickyarratoon/'
                       target='_blank'
                       rel='noreferrer'>
