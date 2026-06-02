@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 type Props = {
-  labels: { products: string; productions: string };
+  labels: { profile: string; products: string; productions: string };
 };
 
 function isActive(pathname: string, href: string) {
@@ -18,6 +18,7 @@ function isActive(pathname: string, href: string) {
 export default function TopNav({ labels }: Props) {
   const pathname = usePathname();
   const links = [
+    { href: "/", label: labels.profile },
     { href: "/products", label: labels.products },
     { href: "/productions", label: labels.productions }
   ];

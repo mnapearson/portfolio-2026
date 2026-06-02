@@ -8,13 +8,15 @@ export function getLang(value?: string | null): Lang {
 
 export const navLabels: Record<
   Lang,
-  { products: string; productions: string }
+  { profile: string; products: string; productions: string }
 > = {
   en: {
+    profile: "Profile",
     products: "Products",
     productions: "Productions"
   },
   de: {
+    profile: "Profil",
     products: "Produkte",
     productions: "Produktionen"
   }
@@ -66,7 +68,7 @@ export const layoutCopy: Record<
         "Calm communication and clear writing first."
       ],
       studioHeading: "Studio",
-      availabilityLine: "Founder, eos archive · Cultural production · Open to collaboration",
+      availabilityLine: "Founder, eos archive · Event Manager, Glasfabrik · Open to collaboration",
       arenaLabel: "Are.na",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
@@ -95,7 +97,7 @@ export const layoutCopy: Record<
         "Ruhige Kommunikation und klare Sprache zuerst."
       ],
       studioHeading: "Studio",
-      availabilityLine: "Gründerin, eos archive · Kulturproduktion · Offen für Zusammenarbeit",
+      availabilityLine: "Gründerin, eos archive · Eventmanagerin, Glasfabrik · Offen für Zusammenarbeit",
       arenaLabel: "Are.na",
       instagramLabel: "Instagram",
       linkedinLabel: "LinkedIn",
@@ -112,7 +114,7 @@ export const homeCopy = {
       "Former digital nomad, based between Leipzig and Berlin. Cultural producer and founder working at the intersection of archive, technology, and community. I run eos archive, an infrastructure project for cultural documentation. My background spans event production at scale, project management, and hands-on platform development. The thread connecting all of it: an ability to see what belongs together and build the structure that makes it work.",
     whatTitle: "What I do",
     whatBody:
-      "I work at the intersection of cultural production, community building, and technology. I produce events, build platforms, and create the infrastructure that lets creative work persist and find its audience. I also take on project management and delivery work for digital teams -- the same skillset, different stage.",
+      "I work at the intersection of cultural production, community building, and technology. I produce events, build platforms, and create the infrastructure that lets creative work persist and find its audience. I also design and develop websites and digital structures for artists, small businesses, and organisations — and take on project management and delivery work for digital teams. The same skillset, applied at different stages.",
     downloadTitle: "Download",
     cvLabel: "CV (PDF)",
     contactTitle: "Contact",
@@ -126,7 +128,7 @@ export const homeCopy = {
       "Ich bin Projektmanagerin und Webentwicklerin in Leipzig. Ich arbeite mit Software- und Digital-Teams, damit Delivery klar und stabil bleibt, und koordiniere außerdem kulturelle Produktionen. Mir sind ruhige Kommunikation und klare Sprache wichtig. Oft halte ich den Faden zwischen Menschen, Entscheidungen und Umsetzung – besonders, wenn es hektisch wird.",
     whatTitle: "Was ich mache",
     whatBody:
-      "Ich unterstütze Teams bei Scope und Meilensteinen, halte Backlogs übersichtlich, moderiere Planung und Meetings, gleiche Stakeholder ab, verfolge Abhängigkeiten und Risiken und verbessere Workflows, damit Delivery konstant und nachvollziehbar bleibt.",
+      "Ich arbeite an der Schnittstelle von Kulturproduktion, Community-Building und Technologie. Ich produziere Events, baue Plattformen und schaffe Infrastruktur, die kreative Arbeit dauerhaft sichtbar macht. Ich entwerfe und entwickle auch Websites und digitale Strukturen für Künstler:innen, kleine Unternehmen und Organisationen — und übernehme Projektmanagement und Delivery für digitale Teams. Dasselbe Skillset, verschiedene Bühnen.",
     downloadTitle: "Download",
     cvLabel: "CV (PDF)",
     contactTitle: "Kontakt",
@@ -179,17 +181,13 @@ export const projectsCopy = {
 export const productsCopy = {
   en: {
     intro:
-      "Selected products where I led or supported technical product delivery.",
+      "Selected products where I led or supported delivery end-to-end.",
     entries: [
       {
         title: "eos archive",
         dates: "Oct 2022 – present",
-        role: "Founder-builder and product lead",
-        body: "Independent platform for event culture publishing and discovery.",
-        focus:
-          "Own roadmap, discovery, and end-to-end delivery. Define priorities, shape scope, and ship product updates across content, platform, and operations.",
-        traction:
-          "50 spaces, 100 events, ~300 newsletter subscribers, 7k+ combined audience (Instagram + Telegram)",
+        role: "Founder",
+        body: "Independent platform for cultural documentation and discovery across Leipzig and Berlin. Founded and built by me; I own the product end-to-end — roadmap, discovery, delivery, and community development. Currently reaching 50 registered spaces, 100 archived events, ~300 newsletter subscribers, and 7k+ combined audience across Instagram and Telegram.",
         websiteLabel: "Website",
         websiteUrl: "https://eosarchive.app",
         socialLabel: "Social",
@@ -199,9 +197,7 @@ export const productsCopy = {
         title: "EKD internal platform",
         dates: "Aug 2022 – Jul 2024",
         role: "Project Manager (team of 15)",
-        body: "Internal platform modernization with a legacy refactor and multiple stakeholder groups.",
-        focus:
-          "Run delivery planning, backlog readiness, sprint cadence, and cross-team coordination. Keep decision-making and risks visible through clear documentation and release planning.",
+        body: "Internal platform modernisation for a legacy-heavy organisation with multiple stakeholder groups. As the first PM at the company, I built Jira and Scrum workflows from scratch, led delivery planning, sprint cadence, backlog readiness, and cross-team coordination — keeping decision-making and risks visible through documentation and release planning.",
         websiteLabel: "Website",
         websiteUrl: "https://www.ekd-solar.de/#owner"
       },
@@ -209,9 +205,7 @@ export const productsCopy = {
         title: "Riese & Müller online shop",
         dates: "Apr 2022 – Jul 2022",
         role: "Full-Stack Developer",
-        body: "E-commerce webshop improvements for an established bike brand.",
-        focus:
-          "Improve frontend structure and implementation quality to support a cleaner release flow and easier maintenance for the delivery team.",
+        body: "Frontend development on the e-commerce webshop for an established bike brand. Improved frontend structure and implementation quality to support a cleaner release flow and easier maintenance across the delivery team.",
         websiteLabel: "Website",
         websiteUrl: "https://www.r-m.de/de/bikes/"
       },
@@ -219,25 +213,21 @@ export const productsCopy = {
         title: "Strollme webshop",
         dates: "E-commerce delivery project",
         role: "Product delivery and technical coordination",
-        body: "Webshop delivery with close coordination across product, design, and engineering.",
-        focus:
-          "Translate priorities into ticket-ready work, keep scope practical, and drive steady releases with clear ownership and communication."
+        body: "Webshop delivery with close coordination across product, design, and engineering. Translated priorities into ticket-ready work, kept scope practical, and drove steady releases with clear ownership and communication.",
+        websiteLabel: "Website",
+        websiteUrl: "https://strollme.com/de"
       }
     ]
   },
   de: {
     intro:
-      "Eine kleine Auswahl an Produkten, zu denen ich im Web-, Plattform- und internen Softwarebereich beigetragen habe. Sensible Details bleiben bewusst allgemein.",
+      "Ausgewählte Produkte, bei denen ich Delivery vollständig oder wesentlich verantwortet habe.",
     entries: [
       {
         title: "eos archive",
         dates: "Okt 2022 – heute",
-        role: "Gründerin und Product Lead",
-        body: "Unabhängige Plattform für Veranstaltungskultur mit Publishing- und Discovery-Fokus.",
-        focus:
-          "Roadmap, Discovery und End-to-End-Delivery verantworten. Prioritäten setzen, Scope schärfen und Produktupdates über Content, Plattform und Operations ausliefern.",
-        traction:
-          "50 Räume, 100 Events, ~300 Newsletter-Abonnent:innen, 7k+ kombinierte Reichweite (Instagram + Telegram)",
+        role: "Gründerin",
+        body: "Unabhängige Plattform für kulturelle Dokumentation und Entdeckung in Leipzig und Berlin. Ich habe eos archive gegründet und aufgebaut und verantworte das Produkt vollständig — Roadmap, Discovery, Delivery und Community-Entwicklung. Aktuell: 50 registrierte Spaces, 100 archivierte Events, ~300 Newsletter-Abonnent:innen und 7k+ Reichweite auf Instagram und Telegram.",
         websiteLabel: "Website",
         websiteUrl: "https://eosarchive.app",
         socialLabel: "Social",
@@ -247,9 +237,7 @@ export const productsCopy = {
         title: "EKD interne Plattform",
         dates: "Aug 2022 – Jul 2024",
         role: "Projektmanagerin (Team von 15)",
-        body: "Modernisierung einer internen Plattform inklusive Legacy-Refactor und mehreren Stakeholdergruppen.",
-        focus:
-          "Delivery-Planung, Backlog-Readiness, Sprint-Takt und teamübergreifende Koordination steuern. Entscheidungen und Risiken durch klare Dokumentation und Release-Planung sichtbar halten.",
+        body: "Modernisierung einer internen Plattform für eine legacy-geprägte Organisation mit mehreren Stakeholdergruppen. Als erste PM im Unternehmen habe ich Jira- und Scrum-Prozesse aufgebaut, Delivery-Planung, Sprint-Takt, Backlog-Readiness und teamübergreifende Koordination geleitet — Entscheidungen und Risiken durch Dokumentation und Release-Planung sichtbar gemacht.",
         websiteLabel: "Website",
         websiteUrl: "https://www.ekd-solar.de/#owner"
       },
@@ -257,9 +245,7 @@ export const productsCopy = {
         title: "Riese & Müller Onlineshop",
         dates: "Apr 2022 – Jul 2022",
         role: "Entwicklerin",
-        body: "E-Commerce-Weiterentwicklung für eine etablierte Fahrradmarke.",
-        focus:
-          "Frontend-Struktur und Implementierungsqualität verbessern, damit Releases sauberer laufen und die Wartung für das Delivery-Team einfacher wird.",
+        body: "Frontend-Entwicklung am E-Commerce-Webshop für eine etablierte Fahrradmarke. Verbesserung von Frontend-Struktur und Implementierungsqualität für sauberere Releases und einfachere Wartung im Delivery-Team.",
         websiteLabel: "Website",
         websiteUrl: "https://www.r-m.de/de/bikes/"
       },
@@ -267,9 +253,9 @@ export const productsCopy = {
         title: "Strollme Onlineshop",
         dates: "E-Commerce-Delivery-Projekt",
         role: "Product Delivery und technische Koordination",
-        body: "Webshop-Delivery in enger Abstimmung zwischen Produkt, Design und Engineering.",
-        focus:
-          "Prioritäten in ticketfähige Arbeit übersetzen, Scope pragmatisch halten und einen verlässlichen Release-Takt sichern."
+        body: "Webshop-Delivery in enger Abstimmung zwischen Produkt, Design und Engineering. Prioritäten in ticketfähige Arbeit übersetzt, Scope pragmatisch gehalten und verlässliche Releases mit klarer Verantwortung umgesetzt.",
+        websiteLabel: "Website",
+        websiteUrl: "https://strollme.com/de"
       }
     ]
   }
@@ -281,6 +267,7 @@ export const productionsCopy = {
       "Selected cultural productions where I held creative and operational roles.",
     roleLabel: "Role",
     websiteLabel: "Website",
+    socialLabel: "Social",
     backLabel: "Back to productions",
     overviewTitle: "Overview",
     detailsTitle: "Details",
@@ -297,6 +284,7 @@ export const productionsCopy = {
       "Ausgewählte kulturelle Produktionen, in denen ich kreative und operative Rollen über Teams, Zeitpläne und Partner hinweg übernommen habe.",
     roleLabel: "Rolle",
     websiteLabel: "Website",
+    socialLabel: "Social",
     backLabel: "Zurück zu Produktionen",
     overviewTitle: "Überblick",
     detailsTitle: "Details",
@@ -314,6 +302,14 @@ const productionTranslations: Record<
   string,
   Partial<Record<Lang, Partial<Production>>>
 > = {
+  "glasfabrik": {
+    de: {
+      role: "Eventmanagerin",
+      summary:
+        "Glasfabrik ist ein Kulturzentrum und Veranstaltungsort in Leipzig. Seit Juni 2026 bin ich dort als Eventmanagerin tätig — für Programmkoordination, Abläufe und die Durchführung vor Ort.",
+      location: "Leipzig"
+    }
+  },
   "detect-classic-festival": {
     de: {
       role: "Leitung Kidz Space",
@@ -324,43 +320,14 @@ const productionTranslations: Record<
       location: "Schloss Bröllin"
     }
   },
-  "goldmund-festival": {
-    de: {
-      role: "Programmkoordination",
-      summary:
-        "Ein Kammermusik-Festival mit kuratiertem Programm und Gäste-Erlebnis. Ich unterstützte die Programmkoordination sowie Abläufe rund um Zeitpläne, Kommunikation und Delivery im Team.",
-      scale: "~130 Teilnehmende",
-      duration: "5 Tage",
-      location: "Historische Schloss-Locations in Deutschland & Polen"
-    }
-  },
-  "family-heirlooms": {
-    de: {
-      role: "Mitorganisatorin und Teilnehmerin",
-      summary:
-        "Gruppenausstellung bei Modos Dever in Leipzig. Ich beteiligte mich mit einem Werk und unterstützte die organisatorische Umsetzung.",
-      duration: "Ausstellung Juni 2025",
-      location: "Leipzig"
-    }
-  },
   "chaos-computer-congress-38c3": {
     de: {
       role: "Eventmanagerin",
       summary:
-        "Großes Jahreskonferenz des Chaos Computer Club. Ich arbeitete im Event-Management und in der Koordination, um Planung, Kommunikation und Umsetzung über die Teams abzustimmen.",
+        "Jahreskonferenz des Chaos Computer Club. Ich arbeitete im Event-Management und in der Koordination, um Planung, Kommunikation und Umsetzung über die Teams abzustimmen.",
       scale: "~12.000 Teilnehmende",
       duration: "4 Tage",
       location: "Congress Center Hamburg"
-    }
-  },
-  "octopus-garden": {
-    de: {
-      role: "Eventmanagerin",
-      summary:
-        "Ein einmaliges Kulturevent mit Live-Programm und Produktionskoordination. Ich unterstützte Event-Management sowie Abläufe über Partner und Zeitpläne hinweg.",
-      scale: "~500 Teilnehmende",
-      duration: "2 Tage",
-      location: "Leipzig"
     }
   }
 };

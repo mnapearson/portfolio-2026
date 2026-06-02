@@ -1,5 +1,16 @@
 [
   {
+    "slug": "glasfabrik",
+    "title": "Glasfabrik",
+    "years": "Jun 2026–present",
+    "role": "Event Manager",
+    "location": "Leipzig",
+    "summary": "Glasfabrik is a cultural production space and event venue in Leipzig. I joined as event manager in June 2026, working across programming, coordination, and on-site delivery.",
+    "website": "https://www.glasfabrik.org",
+    "social": "https://www.instagram.com/glasfabrik_leipzig/"
+  },
+
+  {
     "slug": "detect-classic-festival",
     "title": "Detect Classic Festival",
     "years": "2023–present",
@@ -9,45 +20,7 @@
     "location": "Schloss Brollin",
     "summary": "A festival blending classical, electronic, and experimental music. I lead the Kidz Space area, coordinating planning, setup, and on-site delivery with the wider festival team.",
     "website": "https://detectclassic.com/festival",
-    "image": "/productions/detect/cover.png",
-    "photos": [
-      "/productions/detect/photo-1.jpg",
-      "/productions/detect/photo-2.jpg",
-      "/productions/detect/photo-3.jpg"
-    ]
-  },
-
-  {
-    "slug": "goldmund-festival",
-    "title": "Goldmund Festival",
-    "years": "2024–present",
-    "role": "Program Coordination",
-    "scale": "~130 participants",
-    "duration": "5 days",
-    "location": "Historic castle venues in Germany & Poland",
-    "summary": "A chamber music festival setting with a curated program and guest experience. I supported program coordination and the moving parts around schedules, communication, and delivery across the team.",
-    "image": "/productions/goldmund/cover.png",
-    "photos": [
-      "/productions/goldmund/photo-1.jpg",
-      "/productions/goldmund/photo-2.jpg",
-      "/productions/goldmund/photo-3.jpg"
-    ]
-  },
-
-  {
-    "slug": "family-heirlooms",
-    "title": "Family Heirlooms (Modos Dever, Leipzig)",
-    "years": "Jun 2025",
-    "role": "Co-organiser and participant",
-    "scale": "8 contributors",
-    "summary": "A group exhibition at Modos Dever in Leipzig. I contributed a piece and supported the organisation and delivery of the exhibition.",
-    "website": "https://www.modos-dever.com/programme/family-heirlooms",
-    "image": "/productions/family-heirlooms/cover.png",
-    "photos": [
-      "/productions/family-heirlooms/photo-1.jpg",
-      "/productions/family-heirlooms/photo-2.jpg",
-      "/productions/family-heirlooms/photo-3.jpg"
-    ]
+    "image": "/productions/detect/cover.png"
   },
 
   {
@@ -60,28 +33,6 @@
     "location": "Hamburg Congress Center",
     "summary": "A large-scale annual conference by the Chaos Computer Club. I worked on event management and coordination, helping keep planning, communication, and delivery aligned across teams.",
     "website": "https://events.ccc.de/en/congress/",
-    "image": "/productions/ccc/cover.png",
-    "photos": [
-      "/productions/ccc/photo-1.jpg",
-      "/productions/ccc/photo-2.jpg",
-      "/productions/ccc/photo-3.jpg"
-    ]
-  },
-
-  {
-    "slug": "octopus-garden",
-    "title": "Octopus Garden",
-    "years": "Jul 2023",
-    "role": "Event Manager",
-    "scale": "~500 participants",
-    "duration": "2 days",
-    "location": "Leipzig",
-    "summary": "A one-off cultural event with live programming and production coordination. I supported event management and on-the-ground delivery across partners and schedules.",
-    "image": "/productions/octopus-garden/cover.png",
-    "photos": [
-      "/productions/octopus-garden/photo-1.jpg",
-      "/productions/octopus-garden/photo-2.jpg",
-      "/productions/octopus-garden/photo-3.jpg"
-    ]
+    "image": "/productions/ccc/cover.png"
   }
 ]
