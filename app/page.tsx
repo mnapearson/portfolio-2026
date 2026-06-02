@@ -30,7 +30,7 @@ export default function HomePage() {
 
       <h2 className="section-title">{t.contactTitle}</h2>
       <p>
-        <a href="mailto:mickyarratoon@proton.me">EMAIL</a>
+        <a href="mailto:mickyarratoon@proton.me">Email</a>
       </p>
       <p>
         <a
@@ -38,7 +38,7 @@ export default function HomePage() {
           target="_blank"
           rel="noreferrer"
         >
-          INSTAGRAM
+          Instagram
         </a>
       </p>
       <p>
@@ -47,7 +47,7 @@ export default function HomePage() {
           target="_blank"
           rel="noreferrer"
         >
-          LINKEDIN
+          LinkedIn
         </a>
       </p>
     </div>

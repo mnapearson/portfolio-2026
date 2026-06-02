@@ -6,7 +6,7 @@ import { getLangContext } from "@/lib/i18n-server";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Productions — Michaela Arratoon Pearson",
+  title: "Productions — Micky Arratoon",
   description: "Cultural productions and event management work."
 };
 
@@ -36,6 +36,13 @@ export default function ProductionsPage() {
               <p className="entry-link">
                 <a href={item.website} rel="noreferrer" target="_blank">
                   {t.websiteLabel.toUpperCase()}
+                </a>
+              </p>
+            ) : null}
+            {item.social ? (
+              <p className="entry-link">
+                <a href={item.social} rel="noreferrer" target="_blank">
+                  {t.socialLabel.toUpperCase()}
                 </a>
               </p>
             ) : null}

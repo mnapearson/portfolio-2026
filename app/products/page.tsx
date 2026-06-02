@@ -25,8 +25,6 @@ export default function ProductsPage() {
           </div>
           <div className="entry-role">{entry.role}</div>
           <p>{entry.body}</p>
-          <p>Focus: {entry.focus}</p>
-          {entry.traction ? <p>Traction: {entry.traction}</p> : null}
           {entry.websiteUrl ? (
             <p className="entry-link">
               <a href={entry.websiteUrl} rel="noreferrer" target="_blank">

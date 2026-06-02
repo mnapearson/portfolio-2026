@@ -1,6 +1,6 @@
 import TopNav from "./TopNav";
 
-type NavLabels = { products: string; productions: string };
+type NavLabels = { profile: string; products: string; productions: string };
 
 type Props = {
   title: string;

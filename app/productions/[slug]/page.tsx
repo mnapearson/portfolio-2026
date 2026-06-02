@@ -22,7 +22,7 @@ export function generateMetadata({
   }
 
   return {
-    title: `${production.title} — Michaela Arratoon Pearson`,
+    title: `${production.title} — Micky Arratoon`,
     description: production.summary
   };
 }

@@ -10,6 +10,7 @@ export type Production = {
   location?: string;
   summary: string;
   website?: string;
+  social?: string;
   image?: string;
   photos?: string[];
 };
