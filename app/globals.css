@@ -7,8 +7,11 @@
   --ink:     #0E0E0E;
   --ink-50:  rgba(14,14,14,0.5);
   --ink-20:  rgba(14,14,14,0.12);
-  --red:     #E82020;
-  --red-dim: rgba(232,32,32,0.08);
+  --purple:     #812bfb;
+  --purple-dim: rgba(129,43,251,0.08);
+  --blue:        #1510f8;
+  --green:       #06dd29;
+  --green-dim:   rgba(6,221,41,0.08);
   --border:  rgba(14,14,14,0.12);
   --max-width: 740px;
   --rail-width: clamp(120px, 12vw, 152px);
@@ -64,7 +67,7 @@ a {
 a:hover,
 a:focus-visible,
 a:active {
-  color: var(--red);
+  color: var(--blue);
 }
 
 :focus-visible {
@@ -212,7 +215,7 @@ a:active {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 14px;
-  color: var(--red);
+  color: var(--purple);
 }
 
 .top-nav-list {
@@ -240,7 +243,7 @@ a:active {
 }
 
 .nav-link.active {
-  color: var(--red);
+  color: var(--blue);
 }
 
 .section-title {
@@ -308,7 +311,7 @@ a:active {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   line-height: 1;
-  color: var(--red);
+  color: var(--purple);
 }
 
 .entry-dates {
@@ -435,8 +438,8 @@ a:active {
 }
 
 .callout {
-  background: var(--red-dim);
-  border-left: 2px solid var(--red);
+  background: var(--green-dim);
+  border-left: 2px solid var(--green);
   padding: 12px 16px;
 }
 
