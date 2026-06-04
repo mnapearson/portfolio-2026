@@ -67,7 +67,7 @@ a {
 a:hover,
 a:focus-visible,
 a:active {
-  color: var(--blue);
+  color: var(--green);
 }
 
 :focus-visible {
@@ -243,7 +243,7 @@ a:active {
 }
 
 .nav-link.active {
-  color: var(--blue);
+  color: var(--green);
 }
 
 .section-title {
