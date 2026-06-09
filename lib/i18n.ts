@@ -59,7 +59,7 @@ export const layoutCopy: Record<
         "LinkedIn / Instagram"
       ],
       applyingLine: "Applying as: Michaela Arratoon Pearson",
-      cvLabel: "CV: Download (PDF)",
+      cvLabel: "Download CV",
       currentlyHeading: "Currently",
       currentlyBody: ["Founder of eos archive · Cultural producer · Leipzig / Berlin"],
       notesHeading: "Notes",
@@ -88,7 +88,7 @@ export const layoutCopy: Record<
         "LinkedIn / Instagram"
       ],
       applyingLine: "Bewerbung als: Michaela Arratoon Pearson",
-      cvLabel: "CV: Download (PDF)",
+      cvLabel: "Download CV",
       currentlyHeading: "Aktuell",
       currentlyBody: ["Gründerin von eos archive · Kulturproduzentin · Leipzig / Berlin"],
       notesHeading: "Hinweise",
@@ -116,7 +116,7 @@ export const homeCopy = {
     whatBody:
       "I work at the intersection of cultural production, community building, and technology. I produce events, build platforms, and create the infrastructure that lets creative work persist and find its audience. I also design and develop websites and digital structures for artists, small businesses, and organisations — and take on project management and delivery work for digital teams. The same skillset, applied at different stages.",
     downloadTitle: "Download",
-    cvLabel: "CV (PDF)",
+    cvLabel: "Download CV",
     contactTitle: "Contact",
     emailLabel: "Email",
     instagramLabel: "Instagram",
@@ -130,7 +130,7 @@ export const homeCopy = {
     whatBody:
       "Ich arbeite an der Schnittstelle von Kulturproduktion, Community-Building und Technologie. Ich produziere Events, baue Plattformen und schaffe Infrastruktur, die kreative Arbeit dauerhaft sichtbar macht. Ich entwerfe und entwickle auch Websites und digitale Strukturen für Künstler:innen, kleine Unternehmen und Organisationen — und übernehme Projektmanagement und Delivery für digitale Teams. Dasselbe Skillset, verschiedene Bühnen.",
     downloadTitle: "Download",
-    cvLabel: "CV (PDF)",
+    cvLabel: "Download CV",
     contactTitle: "Kontakt",
     emailLabel: "E-Mail",
     instagramLabel: "Instagram",
@@ -322,9 +322,9 @@ const productionTranslations: Record<
   },
   "chaos-computer-congress-38c3": {
     de: {
-      role: "Eventmanagerin",
+      role: "Produktionsleitung — Hackers Beauty Palace",
       summary:
-        "Jahreskonferenz des Chaos Computer Club. Ich arbeitete im Event-Management und in der Koordination, um Planung, Kommunikation und Umsetzung über die Teams abzustimmen.",
+        "Produktionsleitung für Hackers Beauty Palace, einen selbstorganisierten Raum innerhalb der größten Hackerkonferenz Europas (~12.000 Teilnehmende). Verantwortlich für vollständiges Eventmanagement, Koordination und Umsetzung vor Ort.",
       scale: "~12.000 Teilnehmende",
       duration: "4 Tage",
       location: "Congress Center Hamburg"
